@@ -7,16 +7,17 @@ const Component = styled(Box)`
     box-shadow: 5px 2px 5px 2px rgb(0 0 0/ 0.6);`
 
 const Image = styled(`img`)({
-    width: 150,
+    width: 125,
     margin: `auto`,
     display: `flex`,
-    padding: `35px 0 0`
+    padding: `25px 0 0`
 });
 
 const Img = styled(`img`)({
-    width: 100,
+    width: 110,
     margin: `auto`,
     display: `flex`,
+    padding: 0
 });
 
 const Wrapper = styled(Box)`
@@ -32,7 +33,7 @@ const LoginButton = styled(Button)`
     text-transform: none;
     background: #ff0000;
     color: #000000;
-    height: 50px;
+    height: 45px;
     border-radius: 2px;
     box-shadow: 0 2px 4px 0 rgb(0 0 0/20%);`
 
@@ -40,7 +41,7 @@ const SignupButton = styled(Button)`
     text-transform: none;
     background: #FFFF00;
     color: #000000;
-    height: 50px;
+    height: 45px;
     border-radius: 2px;
     box-shadow: 0 2px 4px 0 rgb(0 0 0/20%);`
 
@@ -51,7 +52,7 @@ const Text = styled(Typography)`
 const Login = () => {
 
     const imageURL = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVRE92NW3f-Dja_3IggL2rr72vlCPUcGmiNA&usqp=CAU'
-    const imgURL = 'https://i.postimg.cc/RVK1WmgL/Brick-Hub-1.png';
+    const imgURL = 'https://i.postimg.cc/RZ2VMn2Z/HUB-1-1.png';
 
     const [account, toggleAccount] = useState('login');
 
