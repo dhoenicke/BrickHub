@@ -49,15 +49,26 @@ const Text = styled(Typography)`
     color: #808080;
     font-size: 12px;`
 
+const signupInitialValues = {
+    name: '',
+    username: '',
+    password: ''
+}
+
 const Login = () => {
 
     const imageURL = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVRE92NW3f-Dja_3IggL2rr72vlCPUcGmiNA&usqp=CAU'
     const imgURL = 'https://i.postimg.cc/RZ2VMn2Z/HUB-1-1.png';
 
     const [account, toggleAccount] = useState('login');
+    const [signup, setSignup] = useState(signupInitialValues);
 
     const toggleSignup = () => {
         account === 'signup' ? toggleAccount('login') : toggleAccount('signup');
+    }
+
+    const onInputChange = (e) => {
+        setSignup({ ...signup, [e.target.name]: e.target.value});
     }
 
     return (
@@ -75,9 +86,9 @@ const Login = () => {
                         </Wrapper>
                         :
                         <Wrapper>
-                            <TextField variant='standard' label='Enter Name' />
-                            <TextField variant='standard' label='Enter Username' />
-                            <TextField variant='standard' label='Enter Password' />
+                            <TextField variant='standard' onChange={(e) => onInputChange(e)} name='name' label='Enter Name' />
+                            <TextField variant='standard' onChange={(e) => onInputChange(e)} name='username' label='Enter Username' />
+                            <TextField variant='standard' onChange={(e) => onInputChange(e)} name='password' label='Enter Password' />
 
                             <SignupButton>Signup</SignupButton>
                             <Text style={{ textAlign: 'center' }}>OR</Text>
